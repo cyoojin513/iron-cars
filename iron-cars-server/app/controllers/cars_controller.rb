@@ -15,6 +15,11 @@ class CarsController < ApplicationController
     updated_car.to_json
   end
 
+  delete "/cars/:id" do
+    sold_car = Car.find(params[:id])
+    sold_car.destroy
+  end
+
   def car_parameters
 
     # Need logic hear to check if the Seller Name (the person who is submitting the car to sell on the front end)
