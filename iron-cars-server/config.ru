@@ -16,3 +16,5 @@ run ApplicationController
 
 # Sold cars application
 use SoldCarsController
+use CarsController
+use SellersController
