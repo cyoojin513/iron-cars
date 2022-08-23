@@ -1,5 +1,5 @@
 import Home from "./Home";
-import Bidding from "./Bidding";
+import BidForm from "./BidForm";
 import Selling from "./Selling";
 import SoldCars from "./SoldCars";
 import NavBar from "./NavBar";
@@ -27,6 +27,7 @@ function App() {
   },
   [])
 
+  // Fetch array of cars for sale again after POST'ing a new car
   function addingNewCar() {
     fetch("http://localhost:9292/")
     .then((response) => response.json())
@@ -37,8 +38,10 @@ function App() {
     <div className="App">
       <NavBar/>
       <Switch>
-        <Route path="/bid">
-          <Bidding/>
+        <Route path="/cars/:id/bid">
+          <BidForm
+            cars ={cars}
+          />
         </Route>
         <Route path ="/sell">
           <Selling
