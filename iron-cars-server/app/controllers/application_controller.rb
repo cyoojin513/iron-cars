@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    Car.all.to_json
+    Car.all.to_json(include: :seller)
   end
 
 end

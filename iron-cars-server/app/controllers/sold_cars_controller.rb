@@ -1,6 +1,6 @@
 class SoldCarsController < ApplicationController
   get "/sold-cars" do
-    SoldCar.all.to_json
+    SoldCar.all.to_json(include: :seller)
   end
 
   post "/sold-cars" do
