@@ -26,8 +26,13 @@ function App() {
       .then((soldCars) => setSoldCars(soldCars))
   },
   [])
-  
 
+  function addingNewCar() {
+    fetch("http://localhost:9292/")
+    .then((response) => response.json())
+    .then((carsForSale) => setCars(carsForSale))
+  }
+  
   return (
     <div className="App">
       <NavBar/>
@@ -36,7 +41,9 @@ function App() {
           <Bidding/>
         </Route>
         <Route path ="/sell">
-          <Selling/>
+          <Selling
+            addingNewCar = {addingNewCar}
+          />
         </Route>
         <Route path= "/sold-cars">
           <SoldCars
