@@ -3,7 +3,7 @@ import BidForm from "./BidForm";
 import Selling from "./Selling";
 import SoldCars from "./SoldCars";
 import NavBar from "./NavBar";
-import {Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
 
@@ -38,11 +38,6 @@ function App() {
     <div className="App">
       <NavBar/>
       <Switch>
-        <Route path="/cars/:id/bid">
-          <BidForm
-            cars ={cars}
-          />
-        </Route>
         <Route path ="/sell">
           <Selling
             addingNewCar = {addingNewCar}
@@ -53,6 +48,11 @@ function App() {
             soldCars = {soldCars}
           />
         </Route>
+        <Route path="/cars/:id/bid">
+          <BidForm
+            cars ={cars}
+          />
+          </Route>
         <Route exact path ="/">
           <Home
             cars = {cars}

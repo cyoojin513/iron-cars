@@ -7,6 +7,7 @@ function Home({cars}) {
     <div>
        {cars.map((car) => <HomeCard
         key = {car.id}
+        id = {car.id}
         make = {car.make}
         model = {car.model}
         desc = {car.description}
@@ -23,14 +24,3 @@ function Home({cars}) {
 }
 
 export default Home
-
-// Image_url
-// Make
-// Model
-// description
-// Year
-// Highest_bid
-// Mileage
-// buy_now
-// bidder
-// seller_id

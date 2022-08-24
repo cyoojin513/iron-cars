@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function HomeCard({make, model, desc, year, highestBid, mileage, seller, image, buyNow, bidder}) {
+function HomeCard({make, model, desc, year, highestBid, mileage, seller, image, buyNow, bidder, id}) {
+  
   return (
     <div>
         <img src={image} alt="car"/>
@@ -13,18 +15,10 @@ function HomeCard({make, model, desc, year, highestBid, mileage, seller, image, 
         <h4>Buy Now: ${buyNow.toLocaleString("en-US")}</h4>
         <h4>Bid Leader: {bidder}</h4>
         <h4>Seller: {seller}</h4>
+        <Link to={`/cars/${id}/bid`}>Bid</Link>
     </div>
   )
 }
 
 export default HomeCard
 
-
-// key = {car.id}
-// make = {car.make}
-// model = {car.model}
-// desc = {car.description}
-// year = {car.year}
-// highestBid = {car.highest_bid}
-// mileage = {car.mileage}
-// seller = {car.seller.name}
