@@ -3,8 +3,11 @@ import BidForm from "./BidForm";
 import Selling from "./Selling";
 import SoldCars from "./SoldCars";
 import NavBar from "./NavBar";
+import About from "./About";
 import { Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from "react";
+// Styling
+import { PageWrapper, PageContent } from "./Styles/PageGrid.Style";
 
 
 function App() {
@@ -35,32 +38,37 @@ function App() {
   }
   
   return (
-    <div className="App">
+    <PageWrapper>
       <NavBar/>
-      <Switch>
-        <Route path ="/sell">
-          <Selling
-            addingNewCar = {addingNewCar}
-          />
-        </Route>
-        <Route path= "/sold-cars">
-          <SoldCars
-            soldCars = {soldCars}
-          />
-        </Route>
-        <Route path="/cars/:id/bid">
-          <BidForm
-            fetchAllCars = {fetchAllCars}
-            fetchSoldCars = {fetchSoldCars}
-          />
+      <PageContent>
+        <Switch>
+          <Route path ="/sell">
+            <Selling
+              addingNewCar = {addingNewCar}
+            />
           </Route>
-        <Route exact path ="/">
-          <Home
-            cars = {cars}
-          />
-        </Route>
-      </Switch>
-    </div>
+          <Route path= "/sold-cars">
+            <SoldCars
+              soldCars = {soldCars}
+            />
+          </Route>
+          <Route path="/cars/:id/bid">
+            <BidForm
+              fetchAllCars = {fetchAllCars}
+              fetchSoldCars = {fetchSoldCars}
+            />
+          </Route>
+          <Route path ="/about">
+            <About />
+          </Route>
+          <Route exact path ="/">
+            <Home
+              cars = {cars}
+            />
+          </Route>
+        </Switch>
+        </PageContent>
+    </PageWrapper>
   );
 }
 

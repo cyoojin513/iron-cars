@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Card } from './Styles/Card.Styles'
 
 function HomeCard({make, model, desc, year, highestBid, mileage, seller, image, buyNow, bidder, id}) {
   
   return (
-    <div>
+    <Card>
         <img src={image} alt="car"/>
         <h3>Make: {make}</h3>
         <h3>Model: {model}</h3>
@@ -16,7 +17,7 @@ function HomeCard({make, model, desc, year, highestBid, mileage, seller, image, 
         <h4>Bid Leader: {bidder}</h4>
         <h4>Seller: {seller}</h4>
         <Link to={`/cars/${id}/bid`}>Bid / Buy</Link>
-    </div>
+    </Card>
   )
 }
 

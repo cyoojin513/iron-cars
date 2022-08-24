@@ -20,7 +20,7 @@ sellerIds = Seller.pluck(:id)
 
 10.times do
   Car.create(
-    image_url: "https://media.istockphoto.com/photos/illustration-of-generic-compact-white-car-front-side-view-picture-id1150931120?b=1&k=20&m=1150931120&s=612x612&w=0&h=y9F9VD231jV3hVKDJkOYkzgOpfbIzjk9JYkX8z7Ztpg=",
+    image_url: "https://static.techspot.com/images2/news/bigimage/2018/04/2018-04-12-image-18-j_1100.webp",
     make: Faker::Vehicle.make,
     model: Faker::Vehicle.model,
     description: Faker::Vehicle.standard_specs.sample,
@@ -36,7 +36,7 @@ end
 #sedding sold cars
 3.times do
   SoldCar.create(
-    image_url: "https://media.istockphoto.com/photos/illustration-of-generic-compact-white-car-front-side-view-picture-id1150931120?b=1&k=20&m=1150931120&s=612x612&w=0&h=y9F9VD231jV3hVKDJkOYkzgOpfbIzjk9JYkX8z7Ztpg=",
+    image_url: "https://static.techspot.com/images2/news/bigimage/2018/04/2018-04-12-image-18-j_1100.webp",
     make: Faker::Vehicle.make,
     model: Faker::Vehicle.model,
     description: Faker::Vehicle.standard_specs.sample,

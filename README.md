@@ -15,3 +15,10 @@
     -bundle install for server
     -npm start for client dev server
     -npm install react-router-dom@5.3.3 (for react router)
+    -create .babelrc file in the root of the client
+{
+    "plugins": ["babel-plugin-styled-components"]
+}
+
+
+    -npm install --save styled-components

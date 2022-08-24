@@ -1,10 +1,11 @@
 import React from 'react'
 import HomeCard from './HomeCard'
+import { ContentGrid } from './Styles/PageGrid.Style'
 
 
 function Home({cars}) {
   return (
-    <div>
+    <ContentGrid>
        {cars.map((car) => <HomeCard
         key = {car.id}
         id = {car.id}
@@ -19,7 +20,7 @@ function Home({cars}) {
         image = {car.image_url}
         bidder = {car.bidder}
        />)}
-    </div>
+    </ContentGrid>
   )
 }
 
