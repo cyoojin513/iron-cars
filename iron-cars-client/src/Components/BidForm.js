@@ -2,24 +2,19 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import BidCard from './BidCard'
 
-function BidForm() {
+function BidForm({fetchAllCars}) {
   let {id} = useParams()
 
   const [car, setCar] = useState({})
-  useEffect(()=> {
+
+  function fetchBiddedCar() {
     fetch(`http://localhost:9292/cars/${id}`)
       .then((response) => response.json())
       .then((carForSale) => setCar(carForSale))
-  },
-  [])
-    
-  // const car = cars[id-1]
+  }
+  useEffect(()=> fetchBiddedCar(),[])
 
-  // console.log(id)
-  console.log(car)
-
-
-  const [formData, setFormData] = useState({bidder: "", new_bid: 0})
+  const [formData, setFormData] = useState({bidder: "", new_bid: 0, id: id})
 
   function handleNewBidder(e) {
     setFormData({...formData, bidder: e.target.value,})
@@ -27,7 +22,6 @@ function BidForm() {
 
   function handleNewBid(e) {
     setFormData({...formData, new_bid: parseFloat(e.target.value).toFixed(2)})
-    console.log(typeof formData.new_bid)
   }
 
 
@@ -40,8 +34,11 @@ function BidForm() {
       .then(patchedInfo => console.log(patchedInfo))
   }
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault()
     parseFloat(formData.new_bid) > car.highest_bid ? handlePatch() : alert("Please enter higher bid")
+    setTimeout(() => {fetchAllCars()}, "1000")
+    fetchBiddedCar()
   }
 
   return (

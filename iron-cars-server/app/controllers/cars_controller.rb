@@ -15,7 +15,7 @@ class CarsController < ApplicationController
     updated_car = Car.find(params[:id]) 
     current_bid = updated_car.highest_bid
 
-    params[:new_bid] > current_bid ? updated_car.update(highest_bid: params[:new_bid], bidder: params[:bidder]) : nil
+    params[:new_bid].to_f > current_bid ? updated_car.update(highest_bid: params[:new_bid].to_f, bidder: params[:bidder]) : nil
 
     updated_car.to_json
   end

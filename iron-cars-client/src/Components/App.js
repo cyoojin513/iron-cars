@@ -11,12 +11,12 @@ function App() {
 
   // Array of Cars for Sale
   const [cars, setCars] = useState([])
-  useEffect(()=> {
+  function fetchAllCars() {
     fetch("http://localhost:9292/")
-      .then((response) => response.json())
-      .then((carsForSale) => setCars(carsForSale))
-  },
-  [])
+    .then((response) => response.json())
+    .then((carsForSale) => setCars(carsForSale))
+  }
+  useEffect(()=> fetchAllCars(),[])
 
   // Array of Sold Cars
   const [soldCars, setSoldCars] = useState([])
@@ -50,7 +50,7 @@ function App() {
         </Route>
         <Route path="/cars/:id/bid">
           <BidForm
-            cars ={cars}
+            fetchAllCars = {fetchAllCars}
           />
           </Route>
         <Route exact path ="/">
