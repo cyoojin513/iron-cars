@@ -1,7 +1,12 @@
-class CarsController < ApplicationController
+class CarsController < ApplicationController  
   post "/cars" do
     new_car = Car.create(car_parameters)
     new_car.to_json
+  end
+
+  get "/cars/:id" do
+    find_car = Car.find(params[:id])
+    find_car.to_json(include: :seller)
   end
 
   patch "/cars/:id" do

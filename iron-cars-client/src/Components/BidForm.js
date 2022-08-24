@@ -1,11 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import BidCard from './BidCard'
 
-function BidForm({cars}) {
+function BidForm() {
   let {id} = useParams()
 
-  const car = cars[id-1]
+  const [car, setCar] = useState({})
+  useEffect(()=> {
+    fetch(`http://localhost:9292/cars/${id}`)
+      .then((response) => response.json())
+      .then((carForSale) => setCar(carForSale))
+  },
+  [])
+    
+  // const car = cars[id-1]
+
+  // console.log(id)
+  console.log(car)
+
 
   const [formData, setFormData] = useState({bidder: "", new_bid: 0})
 
@@ -34,7 +46,7 @@ function BidForm({cars}) {
 
   return (
     <div>
-      <BidCard car={car}/>
+      {car == {} ? null : <BidCard car={car}/>}
       <form onSubmit={handleSubmit}>
         <label htmlFor='buyer'></label>
           <input type='text' name='bidder' placeholder='your name' onChange={handleNewBidder}/>
