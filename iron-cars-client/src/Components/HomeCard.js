@@ -15,7 +15,7 @@ function HomeCard({make, model, desc, year, highestBid, mileage, seller, image, 
         <h4>Buy Now: ${buyNow.toLocaleString("en-US")}</h4>
         <h4>Bid Leader: {bidder}</h4>
         <h4>Seller: {seller}</h4>
-        <Link to={`/cars/${id}/bid`}>Bid</Link>
+        <Link to={`/cars/${id}/bid`}>Bid / Buy</Link>
     </div>
   )
 }

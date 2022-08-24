@@ -20,12 +20,12 @@ function App() {
 
   // Array of Sold Cars
   const [soldCars, setSoldCars] = useState([])
-  useEffect(()=> {
+  function fetchSoldCars(){
     fetch("http://localhost:9292/sold-cars")
       .then((response) => response.json())
       .then((soldCars) => setSoldCars(soldCars))
-  },
-  [])
+  }
+  useEffect( () => fetchSoldCars(),[])
 
   // Fetch array of cars for sale again after POST'ing a new car
   function addingNewCar() {
@@ -51,6 +51,7 @@ function App() {
         <Route path="/cars/:id/bid">
           <BidForm
             fetchAllCars = {fetchAllCars}
+            fetchSoldCars = {fetchSoldCars}
           />
           </Route>
         <Route exact path ="/">

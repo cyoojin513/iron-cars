@@ -23,6 +23,7 @@ class CarsController < ApplicationController
   delete "/cars/:id" do
     sold_car = Car.find(params[:id])
     sold_car.destroy
+    "Car #{params[:id]} sold".to_json
   end
 
   def car_parameters
