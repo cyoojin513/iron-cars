@@ -5,7 +5,7 @@ const Card = styled.div`
     max-width: 400px;
     min-width: 400px;
     max-height: 650px;
-    background-color: #FFFF;
+    background-color: #f8f8f8;
     border-radius: 20px;
     box-shadow: 3px 5px 5px 2px rgb(24 53 88 / 15%);
     position: relative;
@@ -67,13 +67,14 @@ const Card = styled.div`
       text-decoration: none;
       box-shadow: 2px 2px 2px 2px rgb(24 53 88 / 10%);
       border-radius: 15px;
+      /* potential fix? */
       padding: 20px 112px;
-      margin-left: 25px;
+      margin-left: 27px;
       margin-right: 25px;
       margin-top: 6px;
       background: linear-gradient(90deg, #0037ff, #00adff);
       color: white;
-      font-size: 30px;
+      font-size: 25px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: bold;
     }

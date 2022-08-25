@@ -8,6 +8,7 @@ import { Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from "react";
 // Styling
 import { PageWrapper, PageContent } from "./Styles/PageGrid.Style";
+import { GlobalStyles } from "../GlobalStyles";
 
 
 function App() {
@@ -39,35 +40,37 @@ function App() {
   
   return (
     <PageWrapper>
-      <NavBar/>
-      <PageContent>
-        <Switch>
-          <Route path ="/sell">
-            <Selling
-              addingNewCar = {addingNewCar}
-            />
-          </Route>
-          <Route path= "/sold-cars">
-            <SoldCars
-              soldCars = {soldCars}
-            />
-          </Route>
-          <Route path="/cars/:id/bid">
-            <BidForm
-              fetchAllCars = {fetchAllCars}
-              fetchSoldCars = {fetchSoldCars}
-            />
-          </Route>
-          <Route path ="/about">
-            <About />
-          </Route>
-          <Route exact path ="/">
-            <Home
-              cars = {cars}
-            />
-          </Route>
-        </Switch>
-        </PageContent>
+      {/* <GlobalStyles> */}
+        <NavBar/>
+        <PageContent>
+          <Switch>
+            <Route path ="/sell">
+              <Selling
+                addingNewCar = {addingNewCar}
+              />
+            </Route>
+            <Route path= "/sold-cars">
+              <SoldCars
+                soldCars = {soldCars}
+              />
+            </Route>
+            <Route path="/cars/:id/bid">
+              <BidForm
+                fetchAllCars = {fetchAllCars}
+                fetchSoldCars = {fetchSoldCars}
+              />
+            </Route>
+            <Route path ="/about">
+              <About />
+            </Route>
+            <Route exact path ="/">
+              <Home
+                cars = {cars}
+              />
+            </Route>
+          </Switch>
+          </PageContent>
+        {/* </GlobalStyles> */}
     </PageWrapper>
   );
 }
