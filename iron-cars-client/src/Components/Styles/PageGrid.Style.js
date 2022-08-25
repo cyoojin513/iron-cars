@@ -21,6 +21,16 @@ const ContentInCenterColumn = styled.div`
     grid-template-columns: auto 1240px auto;
 `
 
+const SellFormInCenterColumn = styled.div`
+    display: grid;
+    grid-template-columns: auto 840px auto;
+`
+
+const BidCardInCenterColum = styled.div`
+    display: grid;
+    grid-template-columns: auto 805px auto;
+`
+
 const ContentGrid = styled.div`
     margin-top: 30px;
     grid-column: 2;
@@ -30,4 +40,10 @@ const ContentGrid = styled.div`
     gap: 20px;
 `
 
-export {PageWrapper, SecondRow, NavGrid, ContentGrid, ContentInCenterColumn}
+const BidGrid = styled.div`
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 860px 300px;
+`
+
+export {PageWrapper, SecondRow, NavGrid, ContentGrid, ContentInCenterColumn, SellFormInCenterColumn, BidCardInCenterColum, BidGrid}

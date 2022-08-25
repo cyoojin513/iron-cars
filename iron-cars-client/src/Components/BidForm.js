@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import BidCard from './BidCard'
+import { Header } from './Styles/Header.Styles'
+import { BidCardInCenterColum, BidGrid } from './Styles/PageGrid.Style'
+import { BidInput } from './Styles/BidInput.Styles'
 
 function BidForm({fetchAllCars, fetchSoldCars}) {
   let {id} = useParams()
@@ -79,35 +82,28 @@ function BidForm({fetchAllCars, fetchSoldCars}) {
 
   }
 
-
-  console.log(car)
-
   return (
     <div>
-      {car == {} ? null : <BidCard car={car}/>}
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='buyer'></label>
-          <input type='text' name='bidder' placeholder='your name' onChange={handleNewBidder}/>
-        <label htmlFor='price'></label>
-          <input type='float' name='new_bid' placeholder='bid price' onChange={handleNewBid}/>
-        <input type='submit'/>
-      </form>
-      <button onClick={purchaseCar}>Buy now!</button>
+      <Header>
+        <h1>PLACE A BID OR PURCHASE</h1>
+      </Header>
+      <BidCardInCenterColum>
+        <BidGrid>
+          {car == {} ? null : <BidCard car={car} purchaseCar={purchaseCar}/>}
+          <BidInput>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor='buyer'></label>
+                <input type='text' name='bidder' placeholder='Your Name' onChange={handleNewBidder}/>
+              <label htmlFor='price'></label>
+                <input type='float' name='new_bid' placeholder='Enter Bid' onChange={handleNewBid}/>
+              <input type='submit'/>
+            </form>
+            {/* <button onClick={purchaseCar}>Buy now!</button> */}
+          </BidInput>
+        </BidGrid>
+      </BidCardInCenterColum>
     </div>
   )
 }
 
 export default BidForm
-
-// bidder: "Devon Zemlak DO"
-// buy_now: 49443.23
-// description: "60/40 split fold-down rear seat w/outboard adjustable headrests"
-// highest_bid: 12346.64
-// id: 2
-// image_url: "https://media.istockphoto.com/photos/illustration-of-generic-compact-white-car-front-side-view-picture-id1150931120?b=1&k=20&m=1150931120&s=612x612&w=0&h=y9F9VD231jV3hVKDJkOYkzgOpfbIzjk9JYkX8z7Ztpg="
-// make: "Honda"
-// mileage: 74159
-// model: "Durango"
-// seller: {id: 2, name: 'Tiffiny Weimann'}
-// seller_id: 2
-// year: 2015

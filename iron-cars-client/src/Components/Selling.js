@@ -1,4 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { Header } from './Styles/Header.Styles'
+import { SellGrid } from './Styles/Selling.Styles'
+import { SellFormInCenterColumn } from './Styles/PageGrid.Style'
 
 function Selling({addingNewCar}) {
   const [carData, setCarData] = useState({
@@ -44,33 +47,40 @@ function Selling({addingNewCar}) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='name'>
-          <input type='text' name='name' placeholder='First name and last name' onChange={handleChange}/>
-        </label>
-        <label htmlFor='image'>
-          <input type='text' name='image' placeholder='image url' onChange={handleChange}/>
-        </label>
-        <label htmlFor='make'>
-          <input type='text' name='make' placeholder='make of the car' onChange={handleChange}/>
-        </label>
-        <label htmlFor='model'>
-          <input type='text' name='model' placeholder='model of the car' onChange={handleChange}/>
-        </label>
-        <label htmlFor='year'>
-          <input type='number' name='year' placeholder='year of the car' onChange={handleChange}/>
-        </label>
-        <label htmlFor='description'>
-          <input type='text' name='description' placeholder='description' onChange={handleChange}/>
-        </label>
-        <label htmlFor='mileage'>
-          <input type='number' name='mileage' placeholder='mileage' onChange={handleChange}/>
-        </label>
-        <label htmlFor='price'>
-          <input type='float' name='price' placeholder='purchase price' onChange={handleChange}/>
-        </label>
-        <input type='submit'/>
-      </form>
+      <Header>
+        <h1>LIST YOUR VEHICLE</h1>
+      </Header>
+      <SellFormInCenterColumn>
+        <SellGrid>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor='name'>
+              <input type='text' name='name' placeholder='First Name and Last Name' onChange={handleChange}/>
+            </label>
+            <label htmlFor='image'>
+              <input type='text' name='image' placeholder='Image Url' onChange={handleChange}/>
+            </label>
+            <label htmlFor='make'>
+              <input type='text' name='make' placeholder='Make of the Vehicle' onChange={handleChange}/>
+            </label>
+            <label htmlFor='model'>
+              <input type='text' name='model' placeholder='Model of the Vehicle' onChange={handleChange}/>
+            </label>
+            <label htmlFor='year'>
+              <input type='number' name='year' placeholder='Year of the Vehicle' onChange={handleChange}/>
+            </label>
+            <label htmlFor='description'>
+              <input type='text' name='description' placeholder='Description' onChange={handleChange}/>
+            </label>
+            <label htmlFor='mileage'>
+              <input type='number' name='mileage' placeholder='Mileage' onChange={handleChange}/>
+            </label>
+            <label htmlFor='price'>
+              <input type='float' name='price' placeholder='Purchase Price' onChange={handleChange}/>
+            </label>
+            <input type='submit'/>
+          </form>
+        </SellGrid>
+      </SellFormInCenterColumn>
     </div>
   )
 }
