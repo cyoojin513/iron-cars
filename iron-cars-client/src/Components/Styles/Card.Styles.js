@@ -8,6 +8,7 @@ const Card = styled.div`
     background-color: #FFFF;
     border-radius: 20px;
     box-shadow: 3px 5px 5px 2px rgb(24 53 88 / 15%);
+    position: relative;
 
     img {
       border-top-left-radius: 20px;
@@ -42,13 +43,15 @@ const Card = styled.div`
     h4.desc {
       padding-left: 25px;
       padding-right: 25px;
+      min-height: 54px;
+
       color: #757989;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: lighter;
       margin-top: -3%;
     }
 
-    h3.buy-now {
+    .buy-now {
       padding-right: 25px;
       text-align: right;
       margin-top: -13%;
@@ -56,20 +59,18 @@ const Card = styled.div`
       color: #757989;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: lighter;
-      position: relative;
     }
 
     .link {
       position: absolute;
       text-align: center, bottom;
       text-decoration: none;
-      /* transition: 0.4s; */
       box-shadow: 2px 2px 2px 2px rgb(24 53 88 / 10%);
       border-radius: 15px;
-      /* width: 300px; */
       padding: 20px 112px;
       margin-left: 25px;
       margin-right: 25px;
+      margin-top: 6px;
       background: linear-gradient(90deg, #0037ff, #00adff);
       color: white;
       font-size: 30px;
@@ -78,7 +79,6 @@ const Card = styled.div`
     }
 
     .link:hover {
-      /* box-shadow: 3px 3px 3px 2px rgb(24 53 88 / 20%); */
       background: linear-gradient(45deg, #002E90, #053CB0);
     }
 

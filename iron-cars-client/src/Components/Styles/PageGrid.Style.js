@@ -6,8 +6,10 @@ const PageWrapper = styled.div`
 `
 
 const PageContent = styled.div`
-    margin-left: 10%;
-    margin-right: 10%;
+    display: grid;
+    grid-template-columns: auto 1240px auto;
+    /* margin-left: 10%;
+    margin-right: 10%; */
     grid-row: 2;
 `
 
@@ -17,9 +19,11 @@ const NavGrid = styled.div`
 `
 
 const ContentGrid = styled.div`
+    grid-column: 2;
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
     grid-template-rows: repeat(10, 800px);
+    gap: 20px;
 `
 
 
