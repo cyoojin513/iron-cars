@@ -7,7 +7,7 @@ import About from "./About";
 import { Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from "react";
 // Styling
-import { PageWrapper, PageContent } from "./Styles/PageGrid.Style";
+import { PageWrapper, SecondRow } from "./Styles/PageGrid.Style";
 import { GlobalStyles } from "../GlobalStyles";
 
 
@@ -42,7 +42,7 @@ function App() {
     <PageWrapper>
       {/* <GlobalStyles> */}
         <NavBar/>
-        <PageContent>
+        <SecondRow>
           <Switch>
             <Route path ="/sell">
               <Selling
@@ -69,7 +69,7 @@ function App() {
               />
             </Route>
           </Switch>
-          </PageContent>
+          </SecondRow>
         {/* </GlobalStyles> */}
     </PageWrapper>
   );

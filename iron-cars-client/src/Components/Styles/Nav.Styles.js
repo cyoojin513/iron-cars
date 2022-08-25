@@ -6,7 +6,7 @@ const NavigationStyles = styled.div`
         text-decoration: none;
         padding-top: 30px;
         text-align: center;
-        font-size: 30px;
+        font-size: 23px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: gray;
     }

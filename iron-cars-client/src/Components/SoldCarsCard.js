@@ -1,18 +1,17 @@
 import React from 'react'
+import { Card } from './Styles/Card.Styles'
 
 function SoldCarsCard({make, model, desc, year, mileage, seller, image, soldPrice, buyer}) {
     return (
-      <div>
+      <Card>
           <img src={image} alt="car"/>
-          <h3>Make: {make}</h3>
-          <h3>Model: {model}</h3>
-          <h4>Description: {desc}</h4>
-          <h4>Year: {year}</h4>
-          <h4>Mileage: {mileage.toLocaleString("en-US")} miles</h4>
-          <h4>Sold Price: ${soldPrice.toLocaleString("en-US")}</h4>
-          <h4>Buyer: {buyer}</h4>
-          <h4>Seller: {seller}</h4>
-      </div>
+          <h2>{year} {make} {model}</h2>
+          <h5>Seller: {seller} / {mileage.toLocaleString("en-US")} miles</h5>
+          <h4 className='desc'>{desc}</h4>
+          <h1>Sold Price: ${soldPrice.toLocaleString("en-US")}</h1>
+          <h5>Buyer: {buyer}</h5>
+          <div className ="sold-out">Sold Out</div>
+      </Card>
     )
   }
 

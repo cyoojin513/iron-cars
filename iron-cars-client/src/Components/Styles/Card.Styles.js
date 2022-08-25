@@ -5,10 +5,11 @@ const Card = styled.div`
     max-width: 400px;
     min-width: 400px;
     max-height: 650px;
-    background-color: #f8f8f8;
+    background-color: white;
     border-radius: 20px;
     box-shadow: 3px 5px 5px 2px rgb(24 53 88 / 15%);
     position: relative;
+    transition: 0.3s;
 
     img {
       border-top-left-radius: 20px;
@@ -30,7 +31,7 @@ const Card = styled.div`
       padding-left: 25px;
       margin-top: -5%;
       font-size: 15px;
-      color: #757989;
+      color: #5c5f6b;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: lighter;
     }
@@ -45,7 +46,7 @@ const Card = styled.div`
       padding-right: 25px;
       min-height: 54px;
 
-      color: #757989;
+      color: #5c5f6b;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: lighter;
       margin-top: -3%;
@@ -56,7 +57,7 @@ const Card = styled.div`
       text-align: right;
       margin-top: -13%;
       font-size: 15px;
-      color: #757989;
+      color: #5c5f6b;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: lighter;
     }
@@ -72,16 +73,34 @@ const Card = styled.div`
       margin-left: 27px;
       margin-right: 25px;
       margin-top: 6px;
-      background: linear-gradient(90deg, #0037ff, #00adff);
+      background: linear-gradient(90deg, black, #00adff);
       color: white;
       font-size: 25px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: bold;
     }
 
+    .sold-out {
+      background-color: #730006;
+      color: white;
+      font-size: 1.5em;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      width: 150px;
+      padding: 10px;
+      margin-left: 200px;
+      text-align: center;
+    }
+
     .link:hover {
       background: linear-gradient(45deg, #002E90, #053CB0);
     }
+
+    &:hover {
+    background-color: #f8f8f8;
+    box-shadow: 3px 5px 5px 2px rgb(24 53 88 / 30%);
+
+  }
+
 
 `
 
