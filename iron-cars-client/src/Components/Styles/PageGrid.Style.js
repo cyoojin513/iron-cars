@@ -6,8 +6,8 @@ const PageWrapper = styled.div`
 `
 
 const PageContent = styled.div`
-    margin-left: 17%;
-    margin-right: 17%;
+    margin-left: 10%;
+    margin-right: 10%;
     grid-row: 2;
 `
 

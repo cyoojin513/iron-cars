@@ -6,17 +6,16 @@ function HomeCard({make, model, desc, year, highestBid, mileage, seller, image, 
   
   return (
     <Card>
-        <img src={image} alt="car"/>
-        <h3>Make: {make}</h3>
-        <h3>Model: {model}</h3>
-        <h4>Description: {desc}</h4>
-        <h4>Year: {year}</h4>
-        <h4>Highest Bid: ${highestBid.toLocaleString("en-US")}</h4>
-        <h4>Mileage: {mileage.toLocaleString("en-US")} miles</h4>
-        <h4>Buy Now: ${buyNow.toLocaleString("en-US")}</h4>
-        <h4>Bid Leader: {bidder}</h4>
-        <h4>Seller: {seller}</h4>
-        <Link to={`/cars/${id}/bid`}>Bid / Buy</Link>
+      <img src={image} alt="car"/>
+      <h2>{year} {make} {model}</h2>
+      <h5>Seller: {seller} / {mileage.toLocaleString("en-US")} miles</h5>
+      <h4 className='desc'>{desc}</h4>
+      <h1>${highestBid.toLocaleString("en-US")}</h1>
+      {/* <h5>Highest Bid</h5> */}
+      {/* <h4 className='miles-buy-now'>{mileage.toLocaleString("en-US")} miles</h4> */}
+      <h3 className='buy-now'>Buy Now <br></br>${buyNow.toLocaleString("en-US")}</h3>
+      {/* <h4>Bid Leader: {bidder}</h4> */}
+      <Link className='link' to={`/cars/${id}/bid`}>Bid / Buy</Link>
     </Card>
   )
 }
