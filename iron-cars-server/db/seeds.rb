@@ -98,12 +98,14 @@ Car.create(
   seller_id: sellerIds.sample
 )
 
+# Victor's Cars
+
 Car.create(
-  image_url: "https://vehicle-photos-published.vauto.com/57/d7/bc/dd-081c-45e6-be26-93cfb1bb83fe/image-1.jpg",
-  make: 'Mercedes-Benz',
-  model: 'G-Class',
+  image_url: "https://m.atcdn.co.uk/a/media/%7Bresize%7D/d68faa8c0bed4532874569e789693a88.jpg",
+  make: 'Ferrari',
+  model: '488',
   description: Faker::Vehicle.standard_specs.sample,
-  year: 2019,
+  year: 2017,
   mileage: Faker::Vehicle.mileage,
   highest_bid: 153995.58,
   buy_now: 185500.00,
@@ -112,11 +114,11 @@ Car.create(
 )
 
 Car.create(
-  image_url: "https://car-images.bauersecure.com/wp-images/3193/r8_decennium_050.jpg",
+  image_url: "https://i.pinimg.com/originals/35/e0/c0/35e0c03a8d4f661023eca6f1032f0a53.jpg",
   make: 'Audi',
-  model: 'R8 5.2 Plus',
+  model: 'S8',
   description: Faker::Vehicle.standard_specs.sample,
-  year: 2017,
+  year: 2020,
   mileage: Faker::Vehicle.mileage,
   highest_bid: 179986.63,
   buy_now: 206000.00,
@@ -125,9 +127,9 @@ Car.create(
 )
 
 Car.create(
-  image_url: "https://images.hgmsites.net/hug/2016-nissan-gt-r-nismo_100531511_h.jpg",
-  make: 'Nissan',
-  model: 'GT-R Premium',
+  image_url: "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my22/c/cab/byo-options/2022-AMG-C-CABRIOLET-MP-039.jpg",
+  make: 'Mercedes',
+  model: 'AMG GT',
   description: Faker::Vehicle.standard_specs.sample,
   year: 2016,
   mileage: Faker::Vehicle.mileage,
@@ -138,9 +140,9 @@ Car.create(
 )
 
 Car.create(
-  image_url: "https://cdn.motor1.com/images/mgl/P33G24/s3/2022-bmw-i7.jpg",
-  make: 'BMW',
-  model: '7 Series 740i',
+  image_url: "https://media.istockphoto.com/photos/lotus-demands-picture-id519172829?k=20&m=519172829&s=612x612&w=0&h=E7hR2GjUH7GHYaQDwj3PedF_w_SCQ7QqG20o61Jn12k=",
+  make: 'Lotus',
+  model: '519',
   description: Faker::Vehicle.standard_specs.sample,
   year: 2022,
   mileage: Faker::Vehicle.mileage,
@@ -151,9 +153,9 @@ Car.create(
 )
 
 Car.create(
-  image_url: "https://www.motortrend.com/uploads/2022/07/2023_Volvo_S90_Recharge_T8_AWD_Platinum_Grey-5.jpg",
-  make: 'Volvo',
-  model: 'S90',
+  image_url: "https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/110007841/WP0AD2A90HS166889/2505f04d0921e2707e30cb0eeb39c58c.jpg",
+  make: 'Porsche',
+  model: '911 Turbo S',
   description: Faker::Vehicle.standard_specs.sample,
   year: 2022,
   mileage: Faker::Vehicle.mileage,
