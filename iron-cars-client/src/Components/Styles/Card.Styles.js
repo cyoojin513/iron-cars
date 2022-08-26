@@ -156,7 +156,6 @@ const BiddingCard = styled.div`
     .buy-now {
       margin-left: 400px;
       margin-top: -13%;
-
       cursor: pointer;
       border-radius: 18px;
       padding: 30px 40px;

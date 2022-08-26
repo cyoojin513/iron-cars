@@ -9,7 +9,10 @@ function BidForm({fetchAllCars, fetchSoldCars}) {
   let {id} = useParams()
   let history = useHistory()
 
-  const [car, setCar] = useState({})
+  const [car, setCar] = useState({
+    buy_now: 0,
+    highest_bid: 0
+  })
 
   function fetchBiddedCar() {
     fetch(`http://localhost:9292/cars/${id}`)
@@ -98,7 +101,6 @@ function BidForm({fetchAllCars, fetchSoldCars}) {
                 <input type='float' name='new_bid' placeholder='Enter Bid' onChange={handleNewBid}/>
               <input type='submit'/>
             </form>
-            {/* <button onClick={purchaseCar}>Buy now!</button> */}
           </BidInput>
         </BidGrid>
       </BidCardInCenterColum>
