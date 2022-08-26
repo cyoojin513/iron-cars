@@ -12,18 +12,35 @@ const NavigationStyles = styled.div`
         color: gray;
     }
 
+    .active {
+        color: black;
+    }
+
     .about{
         text-align: right;
         padding-right: 200px;
     }
 
-    img {
+    /* img {
         width: 250px;
         height: auto;
         padding-left: 30px;
         padding-top: 10px;
+    } */
+
+`
+
+
+const Logo = styled.div`
+    /* display: flex;
+    align-items: center; */
+
+    img {
+        width: 250px;
+        height: auto;
+        margin-top: -20px;
     }
 
 `
 
-export {NavigationStyles}
+export {NavigationStyles, Logo}

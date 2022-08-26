@@ -154,13 +154,14 @@ const BiddingCard = styled.div`
     }
 
     .buy-now {
-      margin-left: 435px;
-      margin-top: -14%;
+      margin-left: 400px;
+      margin-top: -13%;
+
       cursor: pointer;
       border-radius: 18px;
       padding: 30px 40px;
       background: linear-gradient(90deg, black, #00B098);
-      width: 260px;
+      width: 300px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-size: 25px;
       font-weight: bold;
