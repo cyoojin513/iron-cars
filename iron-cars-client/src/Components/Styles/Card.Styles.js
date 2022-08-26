@@ -124,7 +124,7 @@ const BiddingCard = styled.div`
 
     h1 {
       padding-left: 25px;
-      font-size: 31px;
+      font-size: 40px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: bold;
     }
@@ -146,7 +146,7 @@ const BiddingCard = styled.div`
     h4.desc {
       padding-left: 25px;
       padding-right: 25px;
-      min-height: 54px;
+      min-height: 40px;
       color: #5c5f6b;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: lighter;
@@ -156,6 +156,7 @@ const BiddingCard = styled.div`
     .buy-now {
       margin-left: 400px;
       margin-top: -13%;
+
       cursor: pointer;
       border-radius: 18px;
       padding: 30px 40px;
@@ -183,17 +184,6 @@ const BiddingCard = styled.div`
       font-size: 25px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: bold;
-    }
-
-    .sold-out {
-      background-color: #730006;
-      color: white;
-      font-size: 1.5em;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      width: 150px;
-      padding: 10px;
-      margin-left: 200px;
-      text-align: center;
     }
 
     .buy-now:hover {
