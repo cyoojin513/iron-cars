@@ -56,33 +56,36 @@ function BidForm({fetchAllCars, fetchSoldCars}) {
   
 
   function purchaseCar(){
-    alert("Thank you for your purchase")
-    fetch("http://localhost:9292/sold-cars", {
-      method: "POST",
-      headers: {"Content-Type": "application/json" },
-      body: JSON.stringify({
-        make: car.make,
-        model: car.model,
-        mileage: car.mileage,
-        buy_now: car.buy_now,
-        buyer_name: formData.bidder,
-        description: car.description,
-        image_url: car.image_url,
-        year: car.year,
-        seller_name: car.seller.name
+    if (formData.bidder == "")
+      {alert("Please enter your name")}
+    else
+      {alert("Thank you for your purchase")
+      fetch("http://localhost:9292/sold-cars", {
+        method: "POST",
+        headers: {"Content-Type": "application/json" },
+        body: JSON.stringify({
+          make: car.make,
+          model: car.model,
+          mileage: car.mileage,
+          buy_now: car.buy_now,
+          buyer_name: formData.bidder,
+          description: car.description,
+          image_url: car.image_url,
+          year: car.year,
+          seller_name: car.seller.name
+        })
       })
-    })
-    .then(r=>r.json())
-    .then( () => fetchSoldCars())
-
-    fetch(`http://localhost:9292/cars/${id}`, {
-      method: 'DELETE',
-      headers: {"Content-Type": "application/json" },
-      body: JSON.stringify({id: formData.id})
-    }).then(r=>r.json())
-      .then(() => fetchAllCars() )
-      .then(() => history.push("/"))
-
+      .then(r=>r.json())
+      .then( () => fetchSoldCars())
+      .then(() => 
+        fetch(`http://localhost:9292/cars/${id}`, {
+          method: 'DELETE',
+          headers: {"Content-Type": "application/json" },
+          body: JSON.stringify({id: formData.id})
+        }).then(r=>r.json())
+          .then(() => fetchAllCars() )
+          .then(() => history.push("/"))
+      )}
   }
 
   return (

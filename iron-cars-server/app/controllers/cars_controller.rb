@@ -33,10 +33,7 @@ class CarsController < ApplicationController
     # If they exist, get their seller_id and pass it in as the value for seller_id
     # if they don't exist also post so the Seller table
 
-    # new_seller_id = Seller.last.id + 1
     find_seller_name = Seller.find_by(name: params[:seller_name])
-
-    # find_seller_name ? new_seller_id = find_seller_name.id : new_seller_id
 
     {
       make: params[:make],
