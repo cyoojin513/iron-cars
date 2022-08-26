@@ -46,5 +46,12 @@ const BidGrid = styled.div`
     display: grid;
     grid-template-rows: 860px 300px;
 `
+const AboutGrid = styled.div`
+    grid-column: 2;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 620px 620px;
+    margin-left: 170px;
 
-export {PageWrapper, SecondRow, NavGrid, ContentGrid, ContentInCenterColumn, SellFormInCenterColumn, BidCardInCenterColum, BidGrid}
+`
+export {PageWrapper, SecondRow, NavGrid, ContentGrid, ContentInCenterColumn, SellFormInCenterColumn, BidCardInCenterColum, BidGrid, AboutGrid}

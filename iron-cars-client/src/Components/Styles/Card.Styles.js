@@ -196,4 +196,71 @@ const BiddingCard = styled.div`
 
 `
 
-export { Card, BiddingCard }
+const AboutCard = styled.div`
+width: 95%;
+width: 270px;
+height: 400px;
+background-color: white;
+border-radius: 20px;
+box-shadow: 3px 5px 5px 2px rgb(24 53 88 / 15%);
+position: relative;
+transition: 0.3s;
+
+img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin: 0;
+}
+
+h1 {
+  padding-left: 25px;
+  font-size: 31px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+}
+
+h5 {
+  padding-left: 25px;
+  margin-top: -5%;
+  font-size: 15px;
+  color: #5c5f6b;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+}
+
+h2 {
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+h4{
+  padding-left: 25px;
+  padding-right: 25px;
+  min-height: 54px;
+  color: #5c5f6b;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+  margin-top: 20px;
+}
+
+a {
+  padding-left: 25px;
+  padding-right: 25px;
+  min-height: 54px;
+  color: #5c5f6b;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+&:hover {
+background-color: #f8f8f8;
+box-shadow: 3px 5px 5px 2px rgb(24 53 88 / 30%);
+}
+`
+
+export { Card, BiddingCard , AboutCard}

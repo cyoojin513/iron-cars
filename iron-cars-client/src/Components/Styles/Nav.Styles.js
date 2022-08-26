@@ -17,8 +17,8 @@ const NavigationStyles = styled.div`
     }
 
     .about{
-        text-align: right;
-        padding-right: 200px;
+        margin-left: 70%;
+        width: 85px
     }
 
     /* img {
