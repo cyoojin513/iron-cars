@@ -1,4 +1,4 @@
-puts "🌱 Seeding spices..."
+puts "🌱 Seeding car shop data..."
 
 Car.destroy_all
 Seller.destroy_all
