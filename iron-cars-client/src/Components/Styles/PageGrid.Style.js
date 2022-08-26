@@ -24,6 +24,7 @@ const ContentInCenterColumn = styled.div`
 const SellFormInCenterColumn = styled.div`
     display: grid;
     grid-template-columns: auto 840px auto;
+    /* grid-template-rows: 1700px; */
 `
 
 const BidCardInCenterColum = styled.div`

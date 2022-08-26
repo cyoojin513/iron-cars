@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const NavigationStyles = styled.div`
+    background-color: white;
 
     a {
         text-decoration: none;

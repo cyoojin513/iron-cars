@@ -40,7 +40,7 @@ function App() {
   
   return (
     <PageWrapper>
-      {/* <GlobalStyles> */}
+      <GlobalStyles/>
         <NavBar/>
         <SecondRow>
           <Switch>
@@ -70,7 +70,6 @@ function App() {
             </Route>
           </Switch>
           </SecondRow>
-        {/* </GlobalStyles> */}
     </PageWrapper>
   );
 }
