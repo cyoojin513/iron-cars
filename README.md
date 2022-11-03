@@ -1,5 +1,5 @@
 # Iron
-a project by Yoojin Cheong, Victor Haynes
+Iron is an online marketplace to buy and sell luxury vehicles built with React and a Ruby Sinatra server ( creators : Yoojin Cheong, Victor Haynes )
 
 <img src='iron-cars-client/src/Images/iron_1_home.png' width='800px' height='auto'>
 <br></br>
