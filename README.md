@@ -1,6 +1,8 @@
 # Iron
 a project by Yoojin Cheong, Victor Haynes
 
+<img src='iron-cars-client/src/Images/iron_1_home.png' width='800px' height='auto'>
+<br></br>
 
 ## Instruction
 
