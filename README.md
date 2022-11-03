@@ -1,24 +1,38 @@
-
-    // {
-    //     "make": "Nissan",
-    //     "model": "Maxima",
-    //     "year": 2000,
-    //     "mileage": 11938,
-    //     "highest_bid": 0,
-    //     "buy_now": 50000,
-    //     "seller_name": "Victor Haynes",
-    //     "description": "[\"Front wheel drive\", \"LED lights -inc: brake lamps, tail lamps, license plate\", \"Full-size spare tire w/aluminum alloy wheel\", \"6.5\\\" touch screen display\", \"Electronic parking brake\", \"High performance suspension\", \"Electronic control braking (ECB)\", \"Electrochromic pwr folding heated mirrors w/memory -inc: puddle lamps, integrated turn signals, auto reverse tilt-down\"]",
-    //     "image_url": "https://media.istockphoto.com/photos/illustration-of-generic-compact-white-car-front-side-view-picture-id1150931120?b=1&k=20&m=1150931120&s=612x612&w=0&h=y9F9VD231jV3hVKDJkOYkzgOpfbIzjk9JYkX8z7Ztpg="
-    // }
+# Iron
+a project by Yoojin Cheong, Victor Haynes
 
 
-    -bundle install for server
-    -npm start for client dev server
-    -npm install react-router-dom@5.3.3 (for react router)
-    -create .babelrc file in the root of the client
-{
-    "plugins": ["babel-plugin-styled-components"]
-}
+## Instruction
+
+* To set up the frontend, from the client directory, run:
+
+```console
+$ npm install
+```
+
+* Create .babelrc file in the root of the client
+
+* To set up the backend, from the server directory, run:
+
+```console
+$ bundle install
+```
+
+* After completing setting up, please run the backend application in one terminal by running:
+
+```console
+$ bundle exec rake server
+``
+
+* Then, **open another terminal** and run React from the client directory:
+
+```console
+$ npm start
+``
+
+* App will run on the port: [http://localhost:4000](http://localhost:4000)
 
 
-    -npm install --save styled-components
+### Demo Video
+Please check the link below for the demo video.
+* [Demo video](https://www.yoojincheong.com/iron)
