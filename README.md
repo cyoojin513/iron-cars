@@ -22,13 +22,13 @@ $ bundle install
 
 ```console
 $ bundle exec rake server
-``
+```
 
 * Then, **open another terminal** and run React from the client directory:
 
 ```console
 $ npm start
-``
+```
 
 * App will run on the port: [http://localhost:4000](http://localhost:4000)
 
