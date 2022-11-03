@@ -47,7 +47,7 @@ Car.create(
 )
 
 Car.create(
-  image_url: "https://car-images.bauersecure.com/wp-images/3193/r8_decennium_050.jpg",
+  image_url: "https://images.hgmsites.net/hug/2017-audi-r8-v10-plus-selection-24h_100554123_h.jpg",
   make: 'Audi',
   model: 'R8 5.2 Plus',
   description: Faker::Vehicle.standard_specs.sample,
@@ -153,7 +153,7 @@ Car.create(
 )
 
 Car.create(
-  image_url: "https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/110007841/WP0AD2A90HS166889/2505f04d0921e2707e30cb0eeb39c58c.jpg",
+  image_url: "https://st.motortrend.com/uploads/sites/5/2021/05/2021-Porsche-911-Turbo-S-Cabriolet-12.jpg",
   make: 'Porsche',
   model: '911 Turbo S',
   description: Faker::Vehicle.standard_specs.sample,
